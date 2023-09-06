@@ -24,4 +24,4 @@ jobs:
         pip install selenium
 
     - name: Run Selenium Script
-      run: python mihoyo.py
+      run: python mihoyo_claim.py
