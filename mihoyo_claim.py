@@ -19,7 +19,11 @@ time.sleep(3)
 driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-guide_---guide-close---2VvmzE']").click()
 driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---more-icon---202NrS']").click()
 time.sleep(3)
-driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---sign-item---3gtMqV components-home-assets-__sign-content-test_---sign-wrapper---22GpLY']").click()
+try:
+    driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---sign-item---3gtMqV components-home-assets-__sign-content-test_---sign-wrapper---22GpLY']").click()
+except NoSuchElementException:
+    print("Already claimed")
+    pass
 # time.sleep(30)
 # pickle.dump(driver.get_cookies(), open("mihoyo.pkl", "wb"))
 # print("cookie saved")
