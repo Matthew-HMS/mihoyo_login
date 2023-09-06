@@ -6,7 +6,7 @@ from selenium.common.exceptions import NoSuchElementException
 import sys
 
 options = webdriver.ChromeOptions()
-options.add_argument('--headless')
+options.add_argument('--headless=new')
 driver = webdriver.Chrome(options=options)
 driver.get("https://act.hoyolab.com/ys/event/signin-sea-v3/index.html?act_id=e202102251931481&mhy_auth_required=true&mhy_presentation_style=fullscreen&lang=zh-tw&bbs_theme=dark&bbs_theme_device=1")
 time.sleep(3)
