@@ -20,15 +20,13 @@ time.sleep(3)
 # time.sleep(3)
 
 driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-guide_---guide-close---2VvmzE']").click()
-more = driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---more-icon---202NrS']")
-actions = ActionChains(driver)
-actions.move_to_element(more).click().perform()
+more = driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---more-icon---202NrS']").click()
 time.sleep(3)
 try:
     reward = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---sign-item---3gtMqV components-home-assets-__sign-content-test_---sign-wrapper---22GpLY']")))
-    actions = ActionChains(driver)
-    actions.move_to_element(reward).click().perform()
-    # reward.click()
+    # actions = ActionChains(driver)
+    # actions.move_to_element(reward).click().perform()
+    reward.click()
 except NoSuchElementException:
     print("Already claimed")
     pass
