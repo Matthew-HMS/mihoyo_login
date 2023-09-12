@@ -6,6 +6,7 @@ from selenium.common.exceptions import NoSuchElementException
 import sys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless=new')
@@ -23,7 +24,10 @@ driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-content
 time.sleep(3)
 try:
     reward = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---sign-item---3gtMqV components-home-assets-__sign-content-test_---sign-wrapper---22GpLY']")))
-    reward.click()
+    driver.execute_script("arguments[0].scrollIntoView();", reward)
+    actions = ActionChains(driver)
+    actions.move_to_element(reward).click().perform()
+    # reward.click()
 except NoSuchElementException:
     print("Already claimed")
     pass
