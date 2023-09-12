@@ -20,7 +20,7 @@ driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-guide_-
 driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---more-icon---202NrS']").click()
 time.sleep(10)
 try:
-    reward = driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---sign-award---2rJ6SD']")
+    reward = driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---actived-day---34r3rb']")
     reward.click()
 except NoSuchElementException:
     print("Already claimed")
