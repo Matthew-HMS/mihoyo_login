@@ -20,12 +20,16 @@ for cookie in cookies:
 driver.refresh()
 time.sleep(3)
 
+# close and extend window
+actions = ActionChains(driver)
 driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-guide_---guide-close---2VvmzE']").click()
-driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---more-icon---202NrS']").click()
+more = driver.find_element(By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---more-icon---202NrS']")
+actions.move_to_element(more).click().perform()
 time.sleep(3)
+
+# claim reward
 try:
     reward = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---sign-item---3gtMqV components-home-assets-__sign-content-test_---sign-wrapper---22GpLY']")))
-    actions = ActionChains(driver)
     actions.move_to_element(reward).click().perform()
     # reward.click()
 except NoSuchElementException:
