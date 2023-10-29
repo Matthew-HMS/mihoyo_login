@@ -2,8 +2,6 @@ name: claim Mihoyo rewards
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '17 17 * * *'
 
 jobs:
   run_selenium:
