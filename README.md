@@ -20,3 +20,18 @@ user-data-dir=C:\\Users\\{Your name}\\AppData\\Local\\Google\\Chrome...
 ```shell
 python mihoyo.py
 ```
+
+## Task Scheduler
+1. Follow the instruction <a href="https://medium.com/coding-learning-sharing/windows-%E5%B7%A5%E4%BD%9C%E6%8E%92%E7%A8%8B-56989747a1ce">here</a> to complete set up
+
+<br>
+
+2. Modify the `bat` file to your path where the `mihoyo.py` is located
+```shell
+cd C:\Users\{Your path}\mihoyo_login
+```
+
+<br>
+
+Now, the computer should automatically login mihoyo every day at the time you set up 🥳 \
+⚠️ It can last until your cookie expired, then you have to login manually again ⚠️ 
