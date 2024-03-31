@@ -18,8 +18,8 @@ time.sleep(3)
 try:
     actions = ActionChains(driver)
     # WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//*[@class='components-home-assets-__sign-guide_---guide-close---2VvmzE']"))).click()
-    more = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---more-icon---202NrS']")))
-    actions.move_to_element(more).click().perform()
+    # more = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//*[@class='components-home-assets-__sign-content-test_---more-icon---202NrS']")))
+    # actions.move_to_element(more).click().perform()
     # time.sleep(3)
 except:
     print("can't extend")
